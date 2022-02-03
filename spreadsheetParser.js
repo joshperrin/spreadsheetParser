@@ -13,7 +13,7 @@ function spreadsheetParser() {
     pass the filename to parseCSV() to be parsed and return as an object 
     with the csv cells mapped to a letter number notation with the rowCount
   */
-  const { rowCount, data } = parseCSV(passedInCSV);
+  const { rowCount, data } = parseCSV(passedInCSV) || {};
 
   /* parse the cells to calculate their outputs */
   const parsedObj = evaluateCells(data);
