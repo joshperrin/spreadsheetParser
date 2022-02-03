@@ -52,8 +52,8 @@ The code has been heavily commented to provide it's own documentation of how the
 ## spreadsheetParser.js
 
 This file runs through the main steps of the program: 
-1. **[`parseCSV`](###parseCSV.js)** - it grabs the filename from the passed in arguments and passes it to the parseCSV function. The parseCSV function returns an object with the csv data as a JSON object, as well as the number of rows to make it easier to parse back to CSV format.
-2. **[`evaluateCells`](###evaluateCells.js)** - then runs the json data through the evaluateCells function, which evaluates all of the cell references, and then performs the postfix calculations on each cell.
+1. **parseCSV** - it grabs the filename from the passed in arguments and passes it to the parseCSV function. The parseCSV function returns an object with the csv data as a JSON object, as well as the number of rows to make it easier to parse back to CSV format.
+2. **evaluateCells** - then runs the json data through the evaluateCells function, which evaluates all of the cell references, and then performs the postfix calculations on each cell.
 3. **parses CSV** - finally the object with the calculated results is then parsed back into a CSV formatted string and printed to the terminal.
 
 
@@ -68,8 +68,9 @@ The parse CSV function grabs the file passed in via an argument, checks to see i
 
 ### evaluateCells.js
 
-The evaluteCells function does all of the calculation work. It loops through all of the cells in the object and for each one: 1. **[`parseRefs`](####parseRefs.js)** - it calls the parseRefs function and parses all of the cell references
-2. **[`postFixCalc`](####postFixCalc.js)** - then calls the postFixCalc function to calculate the results of each cell
+The evaluteCells function does all of the calculation work. It loops through all of the cells in the object and for each one: 
+1. **parseRefs** - it calls the parseRefs function and parses all of the cell references
+2. **postFixCalc** - then calls the postFixCalc function to calculate the results of each cell
 
 
 #### parseRefs.js
